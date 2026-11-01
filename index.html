@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -40,6 +42,7 @@ header {
     font-size: 21px;
     font-weight: 800;
     letter-spacing: 2px;
+    white-space: nowrap;
 }
 
 .logo span {
@@ -48,13 +51,14 @@ header {
 
 nav {
     display: flex;
-    gap: 28px;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: #999;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
     transition: 0.3s;
 }
 
@@ -70,8 +74,7 @@ nav a:hover {
     align-items: center;
     text-align: center;
     padding: 120px 20px 70px;
-    background:
-        radial-gradient(ellipse at center, #202020 0%, #080808 65%);
+    background: radial-gradient(ellipse at center, #202020 0%, #080808 65%);
 }
 
 .label {
@@ -168,6 +171,73 @@ h2 {
     line-height: 1.7;
 }
 
+/* CONTACTS */
+
+.contacts {
+    padding: 110px 10%;
+    border-top: 1px solid #202020;
+    background: #080808;
+}
+
+.contacts-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contacts-description {
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    display: block;
+    padding: 32px;
+    background: #111;
+    border: 1px solid #292929;
+    color: white;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.contact-card:hover {
+    background: #181818;
+    border-color: #777;
+    transform: translateY(-4px);
+}
+
+.contact-icon {
+    font-size: 25px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 48px;
+}
+
+.contact-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 14px;
+}
+
 footer {
     padding: 35px 8%;
     display: flex;
@@ -179,7 +249,7 @@ footer {
     font-size: 12px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     header {
         padding: 18px 5%;
         flex-direction: column;
@@ -188,16 +258,22 @@ footer {
 
     nav {
         gap: 15px;
-        flex-wrap: wrap;
         justify-content: center;
     }
 
     nav a {
         font-size: 11px;
     }
+}
 
-    section.content {
+@media (max-width: 650px) {
+    section.content,
+    .contacts {
         padding: 85px 7%;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
     }
 
     footer {
@@ -218,7 +294,9 @@ footer {
         <a href="#about">ABOUT</a>
         <a href="#team">TEAM</a>
         <a href="#community">COMMUNITY</a>
+        <a href="#clan">CLAN</a>
         <a href="#join">JOIN</a>
+        <a href="#contacts">CONTACTS</a>
     </nav>
 </header>
 
@@ -294,7 +372,60 @@ footer {
         Interested in joining HeroKings Team?
         Take your first step and become part of our growing organization.
     </p>
-    <a href="#" class="button">APPLICATIONS COMING SOON</a>
+
+    <a href="https://t.me/HeroK1ngTeamBot"
+       class="button"
+       target="_blank"
+       rel="noopener noreferrer">
+       APPLY THROUGH TELEGRAM
+    </a>
+</section>
+
+<section class="contacts" id="contacts">
+    <div class="contacts-container">
+        <div class="section-label">06 / GET IN TOUCH</div>
+        <h2>CONTACTS</h2>
+
+        <p class="contacts-description">
+            Connect with HeroKings Team.
+            For applications and assistance, use the contacts below.
+        </p>
+
+        <div class="contacts-grid">
+
+            <a href="https://t.me/HeroK1ngTeamBot"
+               class="contact-card"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="contact-icon">✉</div>
+                <h3>TELEGRAM BOT</h3>
+                <p>
+                    Applications and organization interaction.
+                </p>
+                <span class="contact-link">
+                    @HeroK1ngTeamBot ↗
+                </span>
+            </a>
+
+            <a href="https://t.me/HeroK1ng_support"
+               class="contact-card"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="contact-icon">⚙</div>
+                <h3>TECHNICAL SUPPORT</h3>
+                <p>
+                    If the bot doesn't work, contact
+                    @HeroK1ng_support.
+                </p>
+                <span class="contact-link">
+                    @HeroK1ng_support ↗
+                </span>
+            </a>
+
+        </div>
+    </div>
 </section>
 
 </main>
