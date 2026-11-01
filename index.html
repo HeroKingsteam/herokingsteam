@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeroKings Team — Official Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            background: #0b0b0b;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #292929;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 85px);
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+            color: #999;
+            margin-top: 20px;
+            font-size: 17px;
+        }
+
+        .button {
+            margin-top: 35px;
+            padding: 15px 35px;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: white;
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+            border-top: 1px solid #292929;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">HEROKINGS TEAM</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#community">Community</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>HEROKINGS TEAM</h1>
+    <p>Your skill. Your opportunity. Your future.</p>
+    <a href="#about" class="button">DISCOVER US</a>
+</section>
+
+<section id="about" class="hero">
+    <h1>ABOUT US</h1>
+    <p>A growing esports organization built around skill, teamwork and opportunity.</p>
+</section>
+
+<section id="team" class="hero">
+    <h1>OUR TEAM</h1>
+    <p>Building our roster. Growing together.</p>
+</section>
+
+<section id="community" class="hero">
+    <h1>COMMUNITY</h1>
+    <p>More than a team. A community.</p>
+</section>
+
+<footer>
+    © 2026 HeroKings Team. All rights reserved.
+</footer>
+
+</body>
+</html>
