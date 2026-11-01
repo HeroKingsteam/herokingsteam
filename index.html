@@ -1,125 +1,307 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HeroKings Team — Official Website</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HeroKings Team — Official Website</title>
 
-        body {
-            background: #0b0b0b;
-            color: #fff;
-            font-family: Arial, sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            padding: 25px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #292929;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+body {
+    background: #080808;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
 
-        nav a {
-            color: #aaa;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 14px;
-        }
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: rgba(8,8,8,0.92);
+    border-bottom: 1px solid #242424;
+    backdrop-filter: blur(12px);
+}
 
-        nav a:hover {
-            color: white;
-        }
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
 
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 30px;
-        }
+.logo span {
+    color: #777;
+}
 
-        .hero h1 {
-            font-size: clamp(42px, 8vw, 85px);
-            letter-spacing: 3px;
-        }
+nav {
+    display: flex;
+    gap: 28px;
+}
 
-        .hero p {
-            color: #999;
-            margin-top: 20px;
-            font-size: 17px;
-        }
+nav a {
+    color: #999;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
 
-        .button {
-            margin-top: 35px;
-            padding: 15px 35px;
-            border: 1px solid white;
-            color: white;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+nav a:hover {
+    color: white;
+}
 
-        .button:hover {
-            background: white;
-            color: black;
-        }
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 70px;
+    background:
+        radial-gradient(ellipse at center, #202020 0%, #080808 65%);
+}
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #666;
-            border-top: 1px solid #292929;
-            font-size: 13px;
-        }
-    </style>
+.label {
+    color: #888;
+    letter-spacing: 5px;
+    font-size: 11px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 100px);
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+
+.hero p {
+    color: #999;
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 38px;
+    padding: 16px 34px;
+    border: 1px solid #777;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: white;
+    color: black;
+    border-color: white;
+}
+
+section.content {
+    padding: 110px 10%;
+    border-top: 1px solid #202020;
+    min-height: 430px;
+}
+
+.section-label {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: clamp(32px, 5vw, 55px);
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.description {
+    max-width: 650px;
+    color: #999;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 32px;
+    background: #111;
+    border: 1px solid #292929;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #777;
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+footer {
+    padding: 35px 8%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #666;
+    border-top: 1px solid #222;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    section.content {
+        padding: 85px 7%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">HEROKINGS TEAM</div>
+    <div class="logo">HERO<span>KINGS</span> TEAM</div>
+
     <nav>
-        <a href="#about">About</a>
-        <a href="#team">Team</a>
-        <a href="#community">Community</a>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#team">TEAM</a>
+        <a href="#community">COMMUNITY</a>
+        <a href="#join">JOIN</a>
     </nav>
 </header>
 
-<section class="hero">
-    <h1>HEROKINGS TEAM</h1>
+<main>
+
+<section class="hero" id="home">
+    <div class="label">INDEPENDENT ESPORTS ORGANIZATION</div>
+    <h1>HERO<span style="color:#777">KINGS</span></h1>
     <p>Your skill. Your opportunity. Your future.</p>
-    <a href="#about" class="button">DISCOVER US</a>
+    <a href="#about" class="button">DISCOVER HERO KINGS</a>
 </section>
 
-<section id="about" class="hero">
-    <h1>ABOUT US</h1>
-    <p>A growing esports organization built around skill, teamwork and opportunity.</p>
+<section class="content" id="about">
+    <div class="section-label">01 / WHO WE ARE</div>
+    <h2>MORE THAN A TEAM.</h2>
+    <p class="description">
+        HeroKings Team is a growing esports organization built around
+        skill, teamwork, development and opportunity.
+
+        We believe that every player deserves a chance to improve,
+        compete and become part of something bigger.
+    </p>
 </section>
 
-<section id="team" class="hero">
-    <h1>OUR TEAM</h1>
-    <p>Building our roster. Growing together.</p>
+<section class="content" id="team">
+    <div class="section-label">02 / OUR TEAM</div>
+    <h2>BUILT TOGETHER.</h2>
+    <p class="description">
+        We are building a roster of dedicated players who share
+        the same passion for competitive gaming.
+    </p>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Main Team</h3>
+            <p>Our competitive direction and main roster.</p>
+        </div>
+
+        <div class="card">
+            <h3>Academy</h3>
+            <p>A place for developing players and future talent.</p>
+        </div>
+
+        <div class="card">
+            <h3>Elite</h3>
+            <p>A direction for ambitious and experienced players.</p>
+        </div>
+    </div>
 </section>
 
-<section id="community" class="hero">
-    <h1>COMMUNITY</h1>
-    <p>More than a team. A community.</p>
+<section class="content" id="community">
+    <div class="section-label">03 / COMMUNITY</div>
+    <h2>ONE COMMUNITY.</h2>
+    <p class="description">
+        HeroKings Team is not only about competition.
+        It is also about people, communication and shared progress.
+    </p>
 </section>
+
+<section class="content" id="clan">
+    <div class="section-label">04 / CLAN</div>
+    <h2>PLAY TOGETHER.</h2>
+    <p class="description">
+        Our clan brings together players who want to play,
+        communicate and grow together.
+    </p>
+</section>
+
+<section class="content" id="join">
+    <div class="section-label">05 / BECOME A PART</div>
+    <h2>YOUR OPPORTUNITY.</h2>
+    <p class="description">
+        Interested in joining HeroKings Team?
+        Take your first step and become part of our growing organization.
+    </p>
+    <a href="#" class="button">APPLICATIONS COMING SOON</a>
+</section>
+
+</main>
 
 <footer>
-    © 2026 HeroKings Team. All rights reserved.
+    <div>© 2026 HeroKings Team</div>
+    <div>Your skill. Your opportunity. Your future.</div>
 </footer>
 
 </body>
